@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>kenrobot</title>
+<link rel="stylesheet" type="text/css" href="/static/static/layout.css">
+<link rel="stylesheet" type="text/css" href="/static/static/index.css">
+<link rel="stylesheet" type="text/css"
+	href="/static/modules/common/header/header.css">
+<link rel="stylesheet" type="text/css"
+	href="/static/modules/common/side/side.css">
+<link rel="stylesheet" type="text/css"
+	href="/static/modules/app/main/main.css">
+<link rel="stylesheet" type="text/css"
+	href="/static/modules/app/canvas/canvas.css">
+<link rel="stylesheet" type="text/css"
+	href="/static/modules/app/canvas/panels.css">
+<link href="css/jsPlumb/jsplumb.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script data-main="js/main" src="js/lib/require.min.js"
+	type="text/javascript"></script>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!-- @require modules/common/header/header.less-->
+		<div class="header">
+			<div class="logo">kenrobot</div>
+			<div class="menus clearfix">
+				<a href="#" class="menu-item">首页</a> <a href="#" class="menu-item">广场</a>
+				<a href="#" class="menu-item menu-item-current">我的</a> <a href="#"
+					class="menu-item">课程</a> <a href="#" class="menu-item">商城</a>
+			</div>
+			<!-- <div class="steps">
+		<div class="line"></div>
+		<div class="step">
+			<span class="circle"></span>
+			<p class="text">组建硬件</p>
+		</div>
+		<div class="step">
+			<span class="circle"></span>
+			<p class="text">编辑流程</p>
+		</div>
+		<div class="step step-current">
+			<span class="circle"></span>
+			<p class="text">仿真验证</p>
+		</div>
+		<div class="step step-last">
+			<span class="circle"></span>
+			<p class="text">下载</p>
+		</div>
+	</div> -->
+			<div class="user-bar">
+				<div class="uinfo">
+					欢迎你，<span class="uname">Kenrobot</span><span class="tri"></span>
+				</div>
+				<ul class="list">
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">我的课程</a></li>
+					<li><a href="#">退出</a></li>
+				</ul>
+				<div class="uimg">
+					<img src="http://tp3.sinaimg.cn/2263972354/50/5606394560/1" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- @require modules/common/side/side.less-->
+		<div class="side">
+			<ul class="nav nav-pills nav-stacked">
+				<li><a href="#">硬件连接</a></li>
+				<li class="active"><a href="#">流程图</a></li>
+				<li><a href="#">C++</a></li>
+				<li><a href="#">仿真演示</a></li>
+			</ul>
+		</div>
+
+		<!-- @require modules/app/main/main.less-->
+		<div class="main-wrap">
+			<!-- @require modules/app/canvas/canvas.less-->
+			<!-- @require modules/app/canvas/panels.less-->
+			<div class="panels">
+				<div class="panel-block">
+					<h4 class="panel-title">程序控制模块</h4>
+					<div id="content-container" class="content-container">
+						<div id="flowchart_start" data-item="flowchart_start_item"
+							class="flowchart-item flowchart-oval">开始</div>
+						<div id="flowchart_end" data-item="flowchart_end_item"
+							class="flowchart-item flowchart-oval">结束</div>
+						<div id="flowchart_process" data-item="flowchart_process_item"
+							class="flowchart-item flowchart-rectangle">流程</div>
+						<div id="flowchart_if" data-item="flowchart_if_item"
+							class="flowchart-item flowchart-prismatic">判定</div>
+						<div id="flowchart_loop" data-item="flowchart_loop_item"
+							class="flowchart-item flowchart-prismatic">循环</div>
+						<div id="flowchart_op" data-item="flowchart_op_item"
+							class="flowchart-item flowchart-parallelogram">操作</div>
+					</div>
+				</div>
+			</div>
+			<div class="canvas" id="flowchart-container"></div>
+			<div class="panels-right panels">
+				<div class="panel-block">
+					<h4 class="panel-title">已配置模块</h4>
+					<div class="right-side1"></div>
+					<div class="right-side2"></div>
+					<div class="right-side3"></div>
+					<div class="right-side4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
